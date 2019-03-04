@@ -1,13 +1,13 @@
 docker-mumble
 =============
 
-A lean mumble container with mumble version 2.8, from debian jessie
+A lean mumble container with mumble version 1.2.18, from Debian Stretch-Lite
  
 [mumble_server.ini](http://wiki.mumble.info/wiki/Murmur.ini) goes in the /data/ volume mount or can be set with the environment variable MUMBLE_INI
 
 to setup SuperUser password, change your run command from the default:
 ```
-docker run -ti --rm diginc/mumble -supw supersecret
+docker run -ti --rm adamhf/mumble_arm -supw supersecret
 mumble-server does not own /data, attempting to modify
 Failed to set initial capabilities
 <W>2014-12-15 04:37:27.398 Initializing settings from /data/mumble_server.ini (basepath /data)
@@ -20,8 +20,3 @@ Failed to set initial capabilities
 ```
 
 start.sh handles /data volume permissions to match the debian mumble server user
-# mumble_docker
-# mumble_docker
-# mumble_docker
-# mumble_docker
-# mumble_docker
