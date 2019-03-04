@@ -1,0 +1,7 @@
+mumble:
+  build: .
+  ports:
+    - "64739:64738"
+    - "64739:64738/udp"
+  volumes:
+    - data/:/data/
