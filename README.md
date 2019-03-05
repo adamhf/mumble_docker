@@ -1,5 +1,6 @@
-docker-mumble
+Mumble Docker
 =============
+[![Build Status](https://travis-ci.com/adamhf/mumble_docker.svg?branch=master)](https://travis-ci.com/adamhf/mumble_docker)
 
 A lean mumble container with mumble version 1.2.18, from Debian Stretch-Lite
  
