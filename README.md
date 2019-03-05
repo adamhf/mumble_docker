@@ -1,4 +1,4 @@
-docker-mumble
+Mumble Docker
 =============
 [![Build Status](https://travis-ci.com/adamhf/mumble_docker.svg?branch=master)](https://travis-ci.com/adamhf/mumble_docker)
 
