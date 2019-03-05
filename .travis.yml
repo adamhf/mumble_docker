@@ -4,11 +4,13 @@ services:
 language: bash
 script:
 - |
-  # echo "Updating Docker to have docker manifest command"
+  echo "Updating Docker to have docker manifest command"
   curl https://get.docker.com | sh
-  # echo "Enabling docker client experimental features"
+  echo "Enabling docker client experimental features"
   mkdir -p ~/.docker
   echo '{ "experimental": "enabled" }' > ~/.docker/config.json
+  echo '{"experimental":true}' | sudo tee /etc/docker/daemon.json
+  sudo service docker restart
   docker version
 # prepare qemu
 - sudo apt-get install qemu-user
