@@ -7,7 +7,7 @@ A lean mumble container with mumble version 1.2.18, from Debian Stretch-Lite
 
 to setup SuperUser password, change your run command from the default:
 ```
-docker run -ti --rm adamhf/mumble_arm -supw supersecret
+docker run -ti --rm adamhf/mumble -supw supersecret
 mumble-server does not own /data, attempting to modify
 Failed to set initial capabilities
 <W>2014-12-15 04:37:27.398 Initializing settings from /data/mumble_server.ini (basepath /data)

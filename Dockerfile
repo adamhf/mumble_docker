@@ -1,6 +1,9 @@
-FROM arm64v8/debian:stretch-slim
+ARG docker_arch=amd64
+FROM $docker_arch/debian:stretch-slim
+ARG qemu_arch="./qemu-x86_64-static"
+ARG docker_arch=amd64
 MAINTAINER Adam Harrison-Fuller <adam@adamhf.io>
-COPY qemu-aarch64-static /usr/bin/
+COPY ${qemu_arch} /usr/bin/
 
 RUN apt-get update && \
     apt-get install -y mumble-server && \
@@ -10,7 +13,8 @@ RUN apt-get update && \
 
 EXPOSE 64738 64738/udp
 
-ADD ./data/mumble_server.ini /config/
+ADD ./data/mumble_server.ini /config-orig/
+RUN mkdir /config
 VOLUME /data
 ENV MUMBLE_INI /config/mumble_server.ini
 
