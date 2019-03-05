@@ -1,6 +1,7 @@
-FROM arm64v8/debian:stretch-slim
+FROM __BASEIMAGE_ARCH__/debian:stretch-slim
+__CROSS_COPY qemu-__QEMU_ARCH__-static /usr/bin/
+
 MAINTAINER Adam Harrison-Fuller <adam@adamhf.io>
-COPY qemu-aarch64-static /usr/bin/
 
 RUN apt-get update && \
     apt-get install -y mumble-server && \
